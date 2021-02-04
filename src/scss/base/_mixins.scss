@@ -1,0 +1,24 @@
+@mixin telefono {
+    @media(min-width: $telefono){
+       @content; //especifica que se le enviaran X cantidad de parametros al mixin
+    }
+}
+
+@mixin tablet {
+    @media(min-width: $tablet){
+       @content; //especifica que se le enviaran X cantidad de parametros al mixin
+    }
+}
+
+@mixin desktop {
+    @media(min-width: $desktop){
+       @content; //especifica que se le enviaran X cantidad de parametros al mixin
+    }
+}
+
+@mixin grid ($columnas, $espaciado) {
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $espaciado;
+    
+}

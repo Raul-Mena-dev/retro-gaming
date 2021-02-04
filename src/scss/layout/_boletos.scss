@@ -1,0 +1,42 @@
+.boletos{
+    text-align: center;
+    
+    h3{
+        padding: $separacion;
+        font-family: $fuenteGamer;
+        color: $negro;
+    }
+}
+
+
+
+.paquetes{
+
+    .incluye{
+        padding: 0;
+    }
+
+    @include tablet{
+    @include grid(2,$separacion);
+    place-items: center;
+
+    }
+
+    li{
+        text-align: center;
+        padding: 1rem;
+        font-size: 3rem;
+        list-style: none;
+        background-color: $blanco;
+    }
+
+    li:first-child{
+        font-family: $fuenteGamer;
+        background-color: $cian;
+    }
+
+    li:last-child{
+        background-color: $amarillo;
+        font-family: $fuenteGamer;
+    }
+}

@@ -1,0 +1,53 @@
+.header{
+    background-color: $azul;
+    z-index: 1;
+
+    .contenido-header{
+        padding: $separacion / 2 0;
+
+        @include tablet{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    h1{
+        color: $blanco;
+        margin-bottom: 2rem;
+        text-align: center;
+        font-family: $fuenteGamer;
+
+        @include tablet{
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+.navegacion-principal{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+
+    a{
+        color: $blanco;
+        font-size: 1rem;
+        font-family: $fuenteGamer;
+
+        &:hover{
+            color: $amarillo;
+        }
+
+        @include tablet{
+            font-size: 2rem;
+        }
+    }
+}
+
+.fijo{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba($color: $azul, $alpha: 0.5);
+}

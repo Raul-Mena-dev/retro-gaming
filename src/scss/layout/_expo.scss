@@ -1,0 +1,32 @@
+.expo{
+    padding: $separacion 0;
+
+    @include tablet{
+        @include grid(2,$separacion);
+        column-gap: $separacion;
+    }
+}
+
+.contenido-expo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+
+    h2{
+        font-size: 3rem;
+        font-family: $fuenteGamer;
+    }
+
+    .fecha{
+        color: $cian;
+        font-weight: $bold;
+    }
+
+    .texto{
+        color: $blanco;
+        font-size: 3rem;
+        padding: $separacion / 2 ;
+        line-height: 1.5;
+        background-color: $azul;
+    }
+}

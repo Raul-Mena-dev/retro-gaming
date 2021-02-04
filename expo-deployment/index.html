@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Gaming</title>
+    <script src="https://kit.fontawesome.com/abdd919bbd.js" 
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="build/css/app.css">
+</head>
+<body>
+    
+
+    <header  class="header">
+        <div class="contenedor contenido-header">
+            <a href="index.html"><h1>Juega Retro</h1></a>
+            <nav class="navegacion-principal">
+                <a href="#programa">Programa</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#boletos">Boletos</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="video">
+        <div class="overlay">
+            <div class="contenedor contenido-video">
+                <h2 id="contador"> </h2>
+                <h3>#juegaretro</h3>
+            </div>
+        </div>
+        <video autoplay muted loop>
+            <source src="src/video/video.mp4" type="video/mp4">
+                <source src="src/video/video.ogg" type="video/ogg">
+                    <source src="src/video/video.webm" type="video/webm"> 
+        </video>
+    </div>
+
+    <div class="expo contenedor">
+        <div class="imagen">
+            <img src="build/img/body.jpg" alt="imagen de videojuegos">
+        </div>
+        <div class="contenido-expo">
+            <h2>Juega Retro</h2>
+            <p class="fecha">11,12 y 13 de Diciembre 2020</p>
+            <p class="texto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat similique illo nulla quae quia recusandae ea odio repellendus error beatae. Ipsum qui quia possimus repudiandae nihil ipsam illum, quidem dicta!</p>
+        </div>
+    </div>
+
+    <section id="programa" class="programa bg-azul">
+        <h3 class="neon">Programa</h3>
+        <p class="dia">Viernes 11</p>
+        <div class="programa-contenedor contenedor">
+            <div class="eventos conferencias bg-amarillo">
+                <p class="nombre-evento">Conferencias</p>
+                <i class="far fa-comments"></i>
+
+                <ul class="calendario">
+                    <li class="neon">13:00 | Octavio González |"Arte de 8 bits"</li>
+                    <li class="neon">15:00 | Andrea Jiménez | "Preservación o Piratearía"</li>
+                    <li class="neon">17:00 | Alonso Carmona | "Sonidos de una generación" </li>
+                </ul>
+            </div>
+
+            <div class="eventos torneos bg-cian">
+                <p class="nombre-evento">Torneos</p>
+                <i class="fas fa-trophy"></i>
+
+                <ul class="calendario">
+                    <li class="neon">12:00 | SpeedRun Super Mario Bros 3</li>
+                    <li class="neon">14:00 | Mario Kart 64</li>
+                    <li class="neon">16:00 | Super Street Fighter 2</li>
+                </ul>
+            </div>
+            
+        </div>
+
+        <p class="dia">Sabado 12</p>
+        <div class="programa-contenedor contenedor">
+            <div class="eventos conferencias bg-cian">
+                <p class="nombre-evento">Conferencias</p>
+                <i class="far fa-comments"></i>
+
+                <ul class="calendario">
+                    <li class="neon">13:00 | Alonso Carmona | "Sonidos de una generación" </li>
+                    <li class="neon">15:00 | Octavio González |"Arte de 8 bits"</li>
+                    <li class="neon">17:00 | Andrea Jiménez | "Preservación o Piratearía"</li>
+                    
+                </ul>
+            </div>
+
+            <div class="eventos torneos bg-amarillo">
+                <p class="nombre-evento">Torneos</p>
+                <i class="fas fa-trophy"></i>
+
+                <ul class="calendario">
+                    <li class="neon">12:00 | Super Street Fighter 2</li>
+                    <li class="neon">14:00 | SpeedRun Super Mario Bros 3</li>
+                    <li class="neon">16:00 | Mario Kart 64</li>
+                    
+                </ul>
+            </div>
+            
+        </div>
+
+        <p class="dia">Domingo 13</p>
+        <div class="programa-contenedor contenedor">
+            <div class="eventos conferencias bg-amarillo">
+                <p class="nombre-evento">Conferencias</p>
+                <i class="far fa-comments"></i>
+
+                <ul class="calendario">
+                    <li class="neon">13:00 | Andrea Jiménez | "Preservación o Piratearía"</li>
+                    <li class="neon">15:00 | Alonso Carmona | "Sonidos de una generación" </li>
+                    <li class="neon">17:00 | Octavio González |"Arte de 8 bits"</li>
+                    
+                    
+                </ul>
+            </div>
+
+            <div class="eventos torneos bg-cian">
+                <p class="nombre-evento">Torneos</p>
+                <i class="fas fa-trophy"></i>
+
+                <ul class="calendario">
+                    <li class="neon">12:00 | Mario Kart 64</li>
+                    <li class="neon">14:00 | Super Street Fighter 2</li>
+                    <li class="neon">16:00 | SpeedRun Super Mario Bros 3</li> 
+                </ul>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="galeria" class="galeria contenedor">
+        <h3>Galeria</h3>
+        <ul class="galeria-imagenes"></ul>
+    </section>
+
+    <div class="contenedor-mapa">
+        <h2>Donde?</h2>
+        <p>Expo Guadalajara,Av. Mariano Otero #1499 CP.44550, Verde Valle, 44550 Guadalajara, Jal.</p>
+        <div id="mapa" class="mapa">
+        
+        </div>
+    </div>
+
+    <section id="boletos" class="boletos bg-azul">
+        <h3>Boletos</h3>
+        <div class="paquetes">
+            <ul class="incluye">
+                <li>1 DIA</li>
+                <li>Acceso al evento</li>
+                <li>Pulsera del evento</li>
+                <li>Bebida(1 por dia)</li>
+                <li>Acceso a todas las conferencias</li>
+                <li>Acceso a todos los torneos</li>
+                <li>Precio: $180.00 M.N.</li>
+            </ul>
+            <ul class="incluye">
+                <li>3 DIAS</li>
+                <li>Acceso al evento</li>
+                <li>Pulsera del evento</li>
+                <li>Playera del evento</li>
+                <li>Bebida cada dia del evento(1 por dia)</li>
+                <li>Acceso a todas las conferencias</li>
+                <li>Acceso a todos los torneos</li>
+                <li>Precio: $450.00 M.N.</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <p>Juega Retro. Todos los derechos reservados &copy;</p>
+    </footer>
+    
+
+
+    <script src="build/js/bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+</body>
+</html>

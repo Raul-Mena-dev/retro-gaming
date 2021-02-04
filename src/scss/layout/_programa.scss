@@ -1,0 +1,61 @@
+.programa{
+    background-color: $azul;
+    padding: $separacion 0;
+
+    h3 , p {
+        text-align: center;
+        color: $negro;
+        font-family: $fuenteGamer;
+    }
+
+    .dia{
+        text-transform: uppercase;
+        margin: $separacion 0;
+    }
+}
+
+.programa-contenedor{
+    
+    @include tablet{
+        
+        @include grid(2, $separacion);
+    }
+
+    .eventos{
+        padding-top: $separacion / 2;
+        text-align: center;
+        i{
+            font-size: 5rem;
+        }
+    }
+
+    .nombre-evento{
+        color: $negro;
+        font-size: 2rem;
+        font-weight: $delgada;
+    }
+    
+   
+}
+
+
+.calendario{
+    padding: 0;
+    list-style: none;
+    li{
+        padding: $separacion / 2;
+        font-weight: $bold;
+
+        span{
+            font-weight: $regular ;
+        }
+    }
+}
+
+.bg-cian .calendario li:nth-child(2n+1){
+    background-color: darken($cian,10);
+}
+
+.bg-amarillo .calendario li:nth-child(2n+1){
+    background-color: darken($amarillo,15);
+}
